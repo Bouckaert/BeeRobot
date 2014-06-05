@@ -1,0 +1,2 @@
+$("#commentarios").empty();
+$("#commentarios").append("<%= escape_javascript(render(@user.comments))%>");

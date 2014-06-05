@@ -1,0 +1,9 @@
+<p id="comentario_<%= comment.id %>">
+<strong>Usuário:</strong>
+<%= comment.commenter %><br>
+<strong>Comment:</strong>
+<%= comment.body %><br>
+<%= link_to 'Apagar', [comment.user, comment], method: :delete, remote: true %>
+ </p>
+ 
+	

@@ -1,0 +1,38 @@
+<%= form_for @user do |f| %>
+<%= render 'shared/error_messages' %>
+  <p>
+    <%= f.label :email %>
+    <%= f.text_field :email %> <!--DESABILITAR EDICAO-->
+  </p>
+  <p>
+    <%= f.label :Senha %>
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, "Confirme sua senha"%>
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= f.label :Nome %>
+    <%= f.text_field :nome %> <!--DESABILITAR EDICAO?-->
+  </p>
+  <p>
+    <%= f.label :CPF %>
+    <%= f.text_field :cpf %> <!--DESABILITAR EDICAO?-->
+  </p>
+  <p>
+    <%= f.label :Carteira %>
+    <%= f.text_field :carteira %> <!--DESABILITAR EDICAO?-->
+  </p>
+  <p>
+    <%= f.label :Telefone %>
+    <%= f.text_field :telefone %>
+  </p>
+  <p>
+    <%= f.label :Endereco %>
+    <%= f.text_field :endereco %>
+  </p>
+  <p>
+    <%= f.submit "Cadastrar", class: "btn btn-large btn-primary" %>
+  </p>
+<% end %>

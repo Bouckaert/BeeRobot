@@ -1,0 +1,14 @@
+<% @users.each do |user| %>
+	<tr>
+	<td><%= gravatar_for user %></td>
+	<td><%= user.nome %></td>
+	<td><%= user.cpf %></td>
+	<td><%= user.email %></td>
+	<td><%= user.carteira %></td>
+	<td><%= user.telefone %></td>
+	<td><%= user.endereco %></td>
+	<td><%= link_to 'Show', user %></td>
+	<td><%= link_to 'Edit', edit_user_path(user) %></td>
+	<td><%= link_to 'Destroy', user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	</tr>
+<% end %>

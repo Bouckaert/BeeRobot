@@ -1,0 +1,46 @@
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+<p>
+  <strong>Nome:</strong>
+  <%= @user.nome %>
+</p>
+<p>
+  <strong>CPF:</strong>
+  <%= @user.cpf %>
+</p>
+<p>
+  <strong>email:</strong>
+  <%= @user.email %>
+</p>
+<p>
+  <strong>Carteira:</strong>
+  <%= @user.carteira %>
+</p>
+<p>
+  <strong>Telefone:</strong>
+  <%= @user.telefone %>
+</p>
+<p>
+  <strong>Endereço:</strong>
+  <%= @user.endereco %>
+</p>
+      </h1>
+    </section>
+  </aside>
+</div>
+
+<div id="commentarios">
+<h2>Commentários</h2>
+<%= render @user.comments %>
+</div>
+
+<h2>Adcionar comentario:</h2>
+<ul class="comments">
+<%= render "comments/form"%>
+<ul>
+
+<p><%= link_to "Listar Usuarios", controller: "users" %></p>
+<p><%#= link_to "Acerva-PE by Robobier", controller: "welcome" %></p>
